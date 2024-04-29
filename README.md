@@ -1,2 +1,36 @@
-# Dapp-Template
-This repository is a monorepo setup for a decentralized application (DApp) that leverages a modern stack including Next.js, Hardhat, and The Graph. Managed using PNPM, this monorepo facilitates modular development across different aspects of the DApp ecosystem—from the frontend interface to smart contracts and data indexing via subgraphs.
+Creating well-structured README files for your main directory and subdirectories is crucial for ensuring that first-time users can easily understand and set up your project. Here's a guide on how to create these README files for your monorepo and its subdirectories (Next.js DApp, Hardhat, and Subgraph).
+
+### 1. Main Directory README
+
+This README is located at the root of your monorepo and provides an overview of the project, how to set up the monorepo, and links to the READMEs of the subdirectories.
+
+```markdown
+# My DApp Monorepo
+
+## Overview
+This repository is a comprehensive monorepo setup for developing a decentralized application using Next.js, Hardhat, and The Graph. Each part of the application is housed in its dedicated subdirectory within this monorepo.
+
+## Structure
+- `/packages/dapp`: Contains the Next.js frontend application.
+- `/packages/hardhat`: Houses the Hardhat environment for smart contract development.
+- `/packages/subgraph`: Setup for The Graph to handle indexing and querying blockchain data.
+
+## Getting Started
+To get started with this monorepo, clone this repository and run the following command to install all dependencies:
+
+```bash
+pnpm install
+```
+
+Navigate to each subdirectory and follow the specific instructions in their respective READMEs for detailed setup and usage instructions.
+
+## Contribution
+Contributions are welcome! Please refer to each package's README for more detailed guidelines on how to contribute effectively.
+
+```
+
+
+```
+
+
+

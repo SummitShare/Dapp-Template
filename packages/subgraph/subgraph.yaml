@@ -1,0 +1,25 @@
+specVersion: 0.0.2
+description: "Example description"
+repository: "<optional_github_repository_url>"
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: ExampleContract
+    network: mainnet
+    source:
+      address: "0xYourContractAddress"
+      abi: ExampleContract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ExampleEntity
+      abis:
+        - name: ExampleContract
+          file: ./abis/ExampleContract.json
+      eventHandlers:
+        - event: ExampleEvent(bytes32 indexed id)
+          handler: handleExampleEvent
+      file: ./src/mapping.ts
