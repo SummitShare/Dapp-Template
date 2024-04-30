@@ -1,8 +1,3 @@
-### 1. Main Directory README
-
-This README is located at the root of your monorepo and provides an overview of the project, how to set up the monorepo, and links to the READMEs of the subdirectories.
-
-```markdown
 # My DApp Monorepo
 
 ## Overview
@@ -19,16 +14,13 @@ To get started with this monorepo, clone this repository and run the following c
 ```bash
 pnpm install
 ```
-
 Navigate to each subdirectory and follow the specific instructions in their respective READMEs for detailed setup and usage instructions.
 
 ## Contribution
 Contributions are welcome! Please refer to each package's README for more detailed guidelines on how to contribute effectively.
 
-```
 
 
-```
 
 
 

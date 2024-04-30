@@ -1,7 +1,5 @@
 ### 3. Hardhat README (`/packages/hardhat`)
 
-```markdown
-# Hardhat
 
 ## Overview
 This directory is set up for smart contract development using Hardhat.
@@ -30,4 +28,3 @@ npx hardhat test
 
 ## Deploying Contracts
 For instructions on deploying contracts, see the deployment scripts located in the `scripts` directory.
-```
