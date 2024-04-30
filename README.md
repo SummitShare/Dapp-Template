@@ -1,5 +1,3 @@
-Creating well-structured README files for your main directory and subdirectories is crucial for ensuring that first-time users can easily understand and set up your project. Here's a guide on how to create these README files for your monorepo and its subdirectories (Next.js DApp, Hardhat, and Subgraph).
-
 ### 1. Main Directory README
 
 This README is located at the root of your monorepo and provides an overview of the project, how to set up the monorepo, and links to the READMEs of the subdirectories.
