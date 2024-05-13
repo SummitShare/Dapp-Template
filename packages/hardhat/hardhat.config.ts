@@ -1,22 +1,17 @@
+import * as dotenv from "dotenv";
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import * as dotenv from "dotenv";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
 import "@openzeppelin/hardhat-upgrades";
-
 dotenv.config();
 
-// [0] = OP SEPOLIA & [1] = MAINNET SEPOLIA
-const cid = [11155420, 11155111]
+// You should replace these values with your own node URL and private keys
+const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL;
+const accounts = process.env.PRIVATE_KEYS?.split(',');
 
-// RPC URL STORED in .env
-const SEPOLIA_RPC_URL = process.env.RPC_URL;
 
-//signer accounts
-const accounts = process.env.PRIVATE_KEYS?.split(','); // for an array of private keys
-
-const config : HardhatUserConfig = {
+const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.20",
     settings: {
@@ -30,10 +25,13 @@ const config : HardhatUserConfig = {
     sepolia: {
       url: SEPOLIA_RPC_URL,
       accounts,
-      chainId: cid[0],
-      gasPrice: 'auto'  
+      chainId: 11155111, // Sepolia chain ID
+      gasPrice: 'auto',
     },
   },
-}
+};
 
 export default config;
+
+
+

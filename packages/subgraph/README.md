@@ -1,6 +1,4 @@
-### 4. Subgraph README (`/packages/subgraph`)
 
-```markdown
 # The Graph Subgraph
 
 ## Overview

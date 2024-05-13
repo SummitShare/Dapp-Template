@@ -1,20 +1,12 @@
 {
   "name": "Dapp-Template",
   "version": "1.0.0",
-  "description": "This repository is a monorepo setup for a decentralized application",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "run_test": "npx hardhat test",
-    "run_gasreport": "REPORT_GAS=true npx hardhat test ",
-    "run_scripts": "",
-    "run_coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp build/contracts --testfiles \"./test/*.ts\"",
-    "run_build": "hardhat compile"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Template"
-  ],
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ethers": "^6.12.0"
-  }
+  "license": "ISC"
 }

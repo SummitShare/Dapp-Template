@@ -1,4 +1,0 @@
-type ExampleEntity @entity {
-  id: ID!
-  data: String
-}

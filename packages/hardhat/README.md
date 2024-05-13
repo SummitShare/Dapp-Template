@@ -1,34 +1,13 @@
-# 3. Hardhat README (`/packages/hardhat`)
+# Sample Hardhat Project
 
-## Overview
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
 
-This directory is set up for smart contract development using Hardhat.
+Try running some of the following tasks:
 
-## Installation
-
-Navigate to this directory and install the dependencies:
-
-```bash
-cd packages/hardhat
-pnpm install
-```
-
-## Compiling Contracts
-
-To compile your smart contracts, run:
-
-```bash
-npx hardhat compile
-```
-
-## Running Tests
-
-To test your smart contracts, run:
-
-```bash
+```shell
+npx hardhat help
 npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat ignition deploy ./ignition/modules/Lock.ts
 ```
-
-## Deploying Contracts
-
-For instructions on deploying contracts, see the deployment scripts located in the `scripts` directory.
