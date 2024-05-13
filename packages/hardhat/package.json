@@ -4,20 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "REPORT_GAS=true hardhat test",
+    "test:coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp build/contracts --testfiles \"./test/*.ts\"",
+    "build": "hardhat compile",
+    "deploy:dev": "hardhat run --network sepolia scripts/deploy.ts",
+    "configure:dev": "hardhat run --network sepolia scripts/configure.ts",
+    "mock:dev": "hardhat run --network sepolia scripts/mock.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@nomiclabs/hardhat-waffle": "^2.0.6",
-    "chai": "^5.1.1",
-    "ethereum-waffle": "^4.0.10",
-    "hardhat": "^2.22.3"
+    "@openzeppelin/hardhat-upgrades": "^3.1.0",
+    "ethers": "^6.12.1",
+    "hardhat": "^2.22.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "ethers": "^6.12.1"
+    "dotenv": "^16.4.5"
   }
 }
