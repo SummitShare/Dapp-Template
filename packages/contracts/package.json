@@ -3,13 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "REPORT_GAS=true hardhat test",
+    "test:coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp build/contracts --testfiles \"./test/*.ts\"",
+    "build": "hardhat compile",
+    "deploy:dev": "hardhat run --network sepolia scripts/deploy.ts",
+    "configure:dev": "hardhat run --network sepolia scripts/configure.ts",
+    "mock:dev": "hardhat run --network sepolia scripts/mock.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
     "hardhat": "^2.18.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
   }
 }
