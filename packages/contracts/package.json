@@ -10,8 +10,8 @@
     "configure:dev": "hardhat run --network sepolia scripts/configure.ts",
     "mock:dev": "hardhat run --network sepolia scripts/mock.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["template", "dapp"],
+  "author": "SummitShare",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
