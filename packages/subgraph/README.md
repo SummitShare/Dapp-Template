@@ -1,6 +1,6 @@
-### Subgraph README (`/packages/subgraph`)
+# Subgraph README (`/packages/subgraph`)
 
-# Creating a Subgraph
+## Creating a Subgraph
 
 This guide is intended to help first-time users set up and deploy a subgraph using The Graph protocol. A subgraph defines how data from a blockchain is processed and made available for querying.
 
