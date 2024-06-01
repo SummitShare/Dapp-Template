@@ -5,6 +5,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
+    "init:graph": "graph init --studio <SUBGRAPH_NAME>",
     "deploy:dev": "graph deploy --product hosted-service --network <network>",
     "create-local": "graph create --node <graph-node-url> <subgraph-name>",
     "remove-local": "graph remove --node <graph-node-url> <subgraph-name>",

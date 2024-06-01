@@ -10,13 +10,23 @@
     "configure:dev": "hardhat run --network sepolia scripts/configure.ts",
     "mock:dev": "hardhat run --network sepolia scripts/mock.ts"
   },
-  "keywords": ["template", "dapp"],
+  "keywords": [
+    "template",
+    "dapp"
+  ],
   "author": "SummitShare",
   "license": "ISC",
   "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
     "dotenv": "^16.4.5",
-    "hardhat": "^2.18.1"
+    "hardhat": "^2.18.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "typechain": "^8.2.0"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.0"

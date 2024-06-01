@@ -1,9 +1,9 @@
+
 # Subgraph README (`/packages/subgraph`)
 
 ## Creating a Subgraph
 
 This guide is intended to help first-time users set up and deploy a subgraph using The Graph protocol. A subgraph defines how data from a blockchain is processed and made available for querying.
-
 
 ## Installation
 
@@ -13,22 +13,39 @@ First, ensure all packages are installed:
 pnpm install
 ```
 
-But this is already installed within the repo
+But this is already installed within the repo.
 
 ## Initialize Your Subgraph
+
+### Step 1: Create Your Subgraph on The Graph Studio
+
+Visit [The Graph Studio](https://thegraph.com/studio) and create a new subgraph. Name your subgraph as desired.
+
+### Step 2: Initialize Your Subgraph
 
 Navigate to the subgraph directory and run the following command to initialize your subgraph:
 
 ```bash
-graph init --product hosted-service --from-contract <CONTRACT_ADDRESS> --network <NETWORK> --abi <ABI_PATH> <GITHUB_USER>/<SUBGRAPH_NAME>
+graph init --studio <SUBGRAPH_NAME>
 ```
 
-Replace `<CONTRACT_ADDRESS>`, `<NETWORK>`, `<ABI_PATH>`, `<GITHUB_USER>`, and `<SUBGRAPH_NAME>` with the relevant details:
-- `<CONTRACT_ADDRESS>`: Address of the smart contract you want to index.
-- `<NETWORK>`: Ethereum network your contract is deployed on (mainnet, ropsten, rinkeby, etc.).
-- `<ABI_PATH>`: Path to the ABI file of your contract.
-- `<GITHUB_USER>`: Your GitHub username.
-- `<SUBGRAPH_NAME>`: Desired name for your subgraph.
+This will initialize your subgraph and you will need to be able to provide you deployed contract(s) address, ABI(p)
+
+Replace `<SUBGRAPH_NAME>` with the name of your subgraph. This command will create a new directory within the subgraph directory with your preferred subgraph name. Navigate into this directory:
+
+```bash
+cd <SUBGRAPH_NAME>
+```
+
+### Step 3: Authenticate in CLI
+
+You will find the auth code on your Subgraph Studio page. Authenticate using the following command:
+
+```bash
+graph auth --studio [AUTH-CODE]
+```
+
+Replace `[AUTH-CODE]` with your actual auth code from the Subgraph Studio.
 
 ## Configure the Subgraph
 
@@ -40,17 +57,23 @@ Edit the `schema.graphql` to define entities based on your needs. Update `src/ma
 
 ## Build and Deploy Your Subgraph
 
+### Build the Subgraph
+
 Compile your subgraph using:
 
 ```bash
-graph build
+graph codegen && graph build
 ```
 
-Deploy it to The Graph's hosted service with:
+### Deploy the Subgraph
+
+Deploy it to The Graph's Subgraph Studio with:
 
 ```bash
-graph deploy --product hosted-service <GITHUB_USER>/<SUBGRAPH_NAME>
+graph deploy --studio <SUBGRAPH_NAME>
 ```
+
+Replace `<SUBGRAPH_NAME>` with your subgraph name.
 
 ## Querying the Subgraph
 
